@@ -1,2 +1,3 @@
-# first_app_ruby_on_rails
-Disciplina da Pos Unipar
+# Tarefa de casa da Disciplina da Pos Unipar
+### Aluno.: Sergio Jonas Schulz
+### Professor.: Mauricio N. Ferreira
