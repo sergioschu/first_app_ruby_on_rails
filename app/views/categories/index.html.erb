@@ -1,0 +1,43 @@
+<h2 class="pb-3 mb-4 mt-4 border-bottom">
+  <%= @title %>
+  <%= link_to "Criar Nova Categoria" , new_category_path, class: 'btn btn-success float-end' %>
+</h2>
+
+<p class="text-end">
+
+</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Created At</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.id %></td>
+        <td><%= category.name %></td>
+        <td><%= category.created_at %></td>
+        <td>
+          <a href="<%= category_path(category.id) %>" class="btn btn-primary">
+            Show
+          </a>
+
+          <a href="<%= edit_category_path(category.id) %>" class="btn btn-warning">
+            Edit
+          </a>
+
+          <%= link_to "Excluir", category_path(category), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Vai dar merda, tem certeza?"
+                  }, class: "btn btn-danger" %>
+
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

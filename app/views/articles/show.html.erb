@@ -1,0 +1,19 @@
+<dl>
+  <dt>ID</dt>
+  <dd><%= @article.id %>
+
+  <dt>Title</dt>
+  <dd><%= @article.title %>
+
+  <dt>Body</dt>
+  <dd><%= @article.body.html_safe %>
+
+  <dt>Categoria</dt>
+  <dd><%= @article.category.name %>
+
+  <dt>Created At</dt>
+  <dd><%= @article.created_at %>
+
+  <dt>Updated At</dt>
+  <dd><%= @article.updated_at %>
+</dl>
